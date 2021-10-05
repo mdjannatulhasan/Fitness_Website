@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn-tailwindcss.vercel.app/"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tomato: 'tomato',
+                        primary: '#F06E38',
+                        'btn-hover':'#f28558',
+                        'border-1':'rgba(255, 255, 255, 0.295743);'
+                    },
+                    fontSize: {
+                        'logo': '2.5rem'
+                    },
+                    fontFamily: {
+                        'mulish': ['Mulish', 'sans-serif']
+                    }
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        body{
+            @apply font-mulish;
+        }
+        .container{
+            @apply mx-auto;
+        }
+        .btn{
+            @apply uppercase border border-solid border-border-1 rounded-3xl font-black hover:bg-btn-hover;
+            padding: 15px 34px;
+            font-size: 14px;
+        }
+        nav ul li{
+            @apply hover:border-b hover:border-b-white pb-1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="bg-primary text-white py-1">
+        <div class="container flex justify-between items-center">
+            <div class="font-black text-logo">
+                FTN
+            </div>
+            <div>
+                <ul class="flex items-center space-x-20"> 
+                    <a href="#"><li>About</li></a>
+                    <a href="#"><li>Features</li></a>
+                    <a href="#"><li>Services</li></a>
+                    <a href="#"><li>Pricing</li></a>
+                    <a href="#"><li>Blog</li></a>
+                </ul>
+            </div>
+            <div>
+                <a href="" class="btn">Contact</a>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>
